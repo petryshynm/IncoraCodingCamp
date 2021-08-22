@@ -1,0 +1,15 @@
+{
+  "name": "task-product-shop",
+  "version": "1.0.0",
+  "description": "incora coding camp test task",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petryshyn Maksym",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}

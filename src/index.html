@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incora Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="role modal">
+        <div class="modal__heading">Choose your role</div>
+        <div class="modal__inputs">
+            <button type="button" value="User">User</button>
+            <button type="button" value="Admin">Admin</button>
+        </div>
+    </div>
+
+    <div class="sign-in modal">
+        <div class="modal__heading">Sign In</div>
+        <form class="modal__inputs">
+            <input  name="userName" required type="text" placeholder="Name">
+            <input  name="userBalance" required type="text" placeholder="Balance">
+            <button class="sign-in__btn" type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <div class="cart-modal">
+        <div class="cart-modal__container modal">
+            <div class="cross" data-close>X</div>
+            <div class="modal__heading">Enter the amount.</div>
+            <div class="modal__inputs">
+                <div>Product you chose: <span class="cart-modal__product">Product</span></div>
+                <input type="number" class="cart-modal__amount" placeholder="0" min=1>
+            </div>
+            <button type="button" class="cart-modal__btn">Add</button>
+        </div>
+    </div>
+
+    <div class="new-product-modal">
+        <div class="new-product-modal__container modal">
+            <div class="cross" data-close>X</div>
+            <div class="modal__heading">Add product</div>
+            <div class="modal__inputs">
+                <input type="text" class="new-product-modal__name" placeholder="Name" >
+                <input type="number" class="new-product-modal__price" placeholder="Price" min=1>
+                <input type="number" class="new-product-modal__amount" placeholder="Amount" min=1>
+            </div>
+            <button type="button" class="new-product-modal__btn">Add</button>
+        </div>
+    </div>
+
+    <div class="prod-container products">
+        <div class="prod-container__title">Available products</div>
+        <div class="prod-container__helper">Name - Price - Total amount</div>
+        <ul class="prod-container__list"></ul>
+    </div>
+
+    <div class="prod-container user-info">
+        <div class="prod-container__title user-info__role">User</div>
+        <div class="user-info__name user-info__text">Name: <span></span></div>
+        <div class="user-info__balance user-info__text">Balance: <span></span></div>
+        <div class="user-info__text">Show orders history:</div>
+        <div class="user-info__orders">
+            <select class="sorting-type">
+                <option selected value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <button type="button" class="user-info__btn">Show</button>
+            <select class="sorting-field">
+                <option selected value="date">Date of order</option>
+                <option value="price">Total price</option>
+            </select>
+        </div>
+        <button type="button" class="user-info__add-product">Add product</button>
+        
+    </div>
+
+    <div class="prod-container cart">
+        <button type="button" class="cart__btn withdraw">Withdraw</button>
+        <div class="prod-container__title">Cart</div>
+        <div class="prod-container__helper">Name - Amount</div>
+        <ul class="prod-container__list">
+            
+        </ul>
+        <div class="cart__total-price">Total price: <span>0 UAH</span></div>
+        <button type="button" class="cart__btn checkout">Checkout</button>
+    </div>
+
+    <div class="error-modal">
+        <div class="error-modal__container modal">
+            <div class="cross" data-close>X</div>
+            <div class="modal__heading">An error occurred.</div>
+            <div class="error-modal__explanation"></div>
+        </div>
+    </div>
+    <script src="/dist/js/bundle.js"></script>
+</body>
+</html>
